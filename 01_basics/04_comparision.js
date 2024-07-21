@@ -22,3 +22,15 @@ console.log(undefined < 0);//false
 //=== strict check it not change only value it check dattatype also
 
 // console.log("2" === 2); //false
+
+
+// types of data-type
+
+// 1.primitive => 7-types
+// String, number, boolean, null, undefined,symbol, bigInt
+
+
+
+
+// 2.ReferenceError(Non primitive)
+// Array, objects, function
