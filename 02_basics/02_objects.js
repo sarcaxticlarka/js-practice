@@ -75,10 +75,41 @@ const obj3 = Object.assign({}, obj1, obj2)
 // const obj4 = {...obj1, ...obj2}
 // console.log(obj4);
 
-console.log(tinderUser);
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// console.log(tinderUser);
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
 
-console.log(tinderUser.hasOwnProperty("isloggedIn"));
-console.log(tinderUser.hasOwnProperty("isloggedOut"));
+// console.log(tinderUser.hasOwnProperty("isloggedIn"));
+// console.log(tinderUser.hasOwnProperty("isloggedOut"));
+
+
+
+
+/******************OBJECT DESTRUCTURE********************/
+
+const subject = {
+    maths : "Sudharshan vairagi",
+    physics: "Rj sir",
+    chemistry: "Harsh sir"
+}
+
+// subject.chemistry
+// const {chemistry} = subject
+const {chemistry: chem} = subject
+
+// console.log(chemistry);
+// console.log(chem);
+
+/***Json is also object*****/
+
+// {
+//     "name": "kurkure",
+//     "username": "yours.kurkure",
+// }
+
+// [
+//     {},
+//     {},
+//     {}
+// ]
