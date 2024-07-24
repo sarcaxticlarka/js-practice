@@ -1,4 +1,5 @@
 //Immediately Invoked function Expression
+///in this function semicolon play important role
 
 // function chai(){
 //     console.log("db connected")
@@ -24,7 +25,7 @@
 
 
 (()=>{
-    let coffee = "hot coffee";
+    let coffee = "hot coffee";//semicolon also matterhere also
     (()=>{
         console.log(`sir we have only ${coffee} in our menu`);
     })();
