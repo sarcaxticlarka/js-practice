@@ -1,7 +1,9 @@
 html {
     margin: 0;
   }
-  
+  body{
+    transition: 0.4s all ease-in linear;
+  }
   span {
     display: block;
   }
