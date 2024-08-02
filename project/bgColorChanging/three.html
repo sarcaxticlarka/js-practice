@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="../styles.css" />
   </head>
+  <style>
+    body{
+      transition: background-color 0.4s ease-in-out;
+    }
+  </style>
   <body style="background-color: #212121; color: #fff">
      
 
@@ -27,11 +32,20 @@
     return color
     }; 
 
-
+    let intervalId;
     const startChanginColor = function(){
-    document.body.style.backgroundColor = randomColor()
+    if(!intervalId){
+      intervalId = setInterval(changeBgColor,1000)
+    }
     } 
-    const stopChanginColor = function(){}   
+
+    function changeBgColor(){
+      document.body.style.backgroundColor = randomColor()
+    }
+    const stopChanginColor = function(){
+      clearInterval(intervalId)
+      intervalId = null
+    }   
 
 document.querySelector("#start").addEventListener("click", startChanginColor)
 
