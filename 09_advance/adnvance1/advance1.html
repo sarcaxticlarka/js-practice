@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table, td, th{
+        border: 2px solid black;
+    }
+</style>
+<body>
+    <h4>The XMLHttpRequest.readyState property returns the state an XMLHttpRequest client is in. An XHR client exists in one of the following states:</h4>
+    <table>
+        <tr>
+            <th>value</th>
+            <th>State</th>
+            <th>description</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>UNSENT</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>OPENED</td>
+            <td>open() has been called.</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>HEADERS_RECEIVED</td>
+            <td>send() has been called, and headers and status are available.</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>LOADING</td>
+            <td>	Downloading; responseText holds partial data.</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>DONE</td>
+            <td>The operation is complete.</td>
+        </tr>
+    </table>
+</body>
+
+<script>
+    const requestUrl = "https://api.github.com/users/sarcaxticlarka"
+   const xhr =  new XMLHttpRequest()
+   xhr.open('GET', requestUrl)
+   xhr.onreadystatechange = function(){
+      console.log(xhr.readyState);
+      if(xhr.readyState === 4){
+        const data = JSON.parse(this.responseText);
+        
+        console.log(typeof data);
+        console.log(data.followers);
+        
+        
+      }
+    
+}
+   
+   
+   xhr.send();
+</script>
+</html>
